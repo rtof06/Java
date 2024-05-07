@@ -36,4 +36,11 @@ public class Pj extends Pessoa {
 		return "Informações da Pessoa Jurídica";
 	}
 
+	@Override
+	public String toString() {
+		return identificar() + "\nCNPJ: " + cnpj +"\nRazão Social: " + getRazaoSocial() +
+				"\nNome: " + getNome() + "\nEmail: " + getEmail() + "\nReceita: R$"
+				+ getRenda();
+	}
+
 }

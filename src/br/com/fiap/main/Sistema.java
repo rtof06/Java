@@ -2,6 +2,7 @@ package br.com.fiap.main;
 
 import javax.swing.JOptionPane;
 
+import br.com.fiap.beans.Endereco;
 import br.com.fiap.beans.Pf;
 import br.com.fiap.beans.Pj;
 
@@ -14,7 +15,7 @@ public class Sistema {
 				"Selecione uma opção", JOptionPane.QUESTION_MESSAGE, null, opcoes, opcoes[0]);
 		
 		
-		if (pergunta instanceof String) {
+		if (pergunta == "Pessoa Física") {
 			//String nome, String email, double renda, String cpf, String rg
 			Pf objPf = new Pf(
 					JOptionPane.showInputDialog("Nome PF:"),
@@ -22,8 +23,15 @@ public class Sistema {
 					Double.parseDouble(JOptionPane.showInputDialog("Renda: ")),
 					JOptionPane.showInputDialog("CPF:"),
 					JOptionPane.showInputDialog("RG:"));
+			
+			Endereco objEndereco = new Endereco(
+					JOptionPane.showInputDialog("Rua: "),
+					JOptionPane.showInputDialog("CEP:"),
+					Integer.parseInt(JOptionPane.showInputDialog("Número"))
+					);
 			//Saída PF
 			System.out.println(objPf);
+			System.out.println(objEndereco);
 			
 		} else {
 			//String nome, String email, double renda, String cnpj, String razaoSocial
@@ -35,8 +43,15 @@ public class Sistema {
 					JOptionPane.showInputDialog("Razão Social:")
 					);
 			
+			Endereco objEndereco = new Endereco(
+					JOptionPane.showInputDialog("Rua: "),
+					JOptionPane.showInputDialog("CEP:"),
+					Integer.parseInt(JOptionPane.showInputDialog("Número"))
+					);
+			
 			//Saída PF
 			System.out.println(objPj);
+			System.out.println(objEndereco);
 		}
 
 	}

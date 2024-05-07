@@ -41,4 +41,12 @@ public class Endereco {
 		this.numero = numero;
 	}
 
+	@Override
+	public String toString() {
+		return "\n\n--- ENDERECO ---" + "Rua:" + getRua() + "\nCEP: "
+				+ getCep() + "\nNúmero: " + getNumero();
+	}
+
+	
+	
 }

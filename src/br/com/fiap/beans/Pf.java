@@ -38,9 +38,9 @@ public class Pf extends Pessoa {
 
 	@Override
 	public String toString() {
-		return identificar() + "\nCPF: " + cpf + "\nRG: " + rg + "\nCPF: " + getCpf() + "\nRG: " + getRg() +
+		return identificar() + "\nCPF: " + getCpf() + "\nRG: " + getRg() +
 				"\nNome: " + getNome() + "\nEmail: " + getEmail() + "\nRenda: R$"
-				+ getRenda() + "\n\n--- ENDERECO ---" + getEndereco();
+				+ getRenda();
 	}
 
 	
